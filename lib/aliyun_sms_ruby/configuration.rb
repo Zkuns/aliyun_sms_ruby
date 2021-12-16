@@ -6,12 +6,12 @@ module AliyunSmsRuby
     def initialize
       @access_key_secret = ''
       @access_key_id = ''
-      @format = ''
-      @region_id = ''
+      @format = 'JSON'
+      @region_id = 'cn-hangzhou'
       @sign_name = ''
-      @signature_method = ''
-      @signature_version = ''
-      @version = ''
+      @signature_method = 'HMAC-SHA1'
+      @signature_version = '1.0'
+      @version = '2017-05-25'
     end
   end
 end
