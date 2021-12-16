@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Aliyun sms ruby sdk}
   spec.description   = %q{Aliyun sms ruby sdk}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Zkuns/aliyun_sms_ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
