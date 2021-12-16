@@ -1,16 +1,14 @@
 # AliyunSmsRuby
-This gem use for Aliyun message send and status query.
+阿里云的短信服务，支持短信发送状态查询，10DLC
 
-Add 10DLC support
-
-## Installation
+## 安装
 
 ```ruby
 gem 'aliyun_sms_ruby'
 ```
 
-## Config
-Add aliyun_sms_ruby.rb to config/initializers.
+## 配置
+添加文件 aliyun_sms_ruby.rb 到 config/initializers.
 
 ```ruby
 AliyunSmsRuby.configure do |config|
@@ -20,10 +18,10 @@ AliyunSmsRuby.configure do |config|
 end
 ```
 
-## Use
+## 使用
 
-### Message send
-Aliyun doc: https://next.api.aliyun.com/document/Dysmsapi/2017-05-25/SendSms
+### 短信发送
+文档地址: https://next.api.aliyun.com/document/Dysmsapi/2017-05-25/SendSms
 
 ``` ruby
 phone_number = '151********'
@@ -32,8 +30,8 @@ template_param = { code: "10001" }
 AliyunSmsRuby.send_message(phone_number, template_code, template_param)
 ```
 
-### Global message send(can not query message send status)
-**Important: After register the 10 DLC number, you need ask the Aliyun support team add your account to their white list. Or you will receive a forbidden error.**
+### 国际短信发送（不可查询发送状态）
+**重要: 注册完10DLC 后需要找阿里云的工单支持把当前的账号加入到阿里云的白名单里才行, 不然就会收到下面的错误**
 
 ```
 {
@@ -42,7 +40,7 @@ AliyunSmsRuby.send_message(phone_number, template_code, template_param)
 }
 ```
 
-Aliyun doc: https://help.aliyun.com/document_detail/164194.html
+文档地址: https://help.aliyun.com/document_detail/164194.html
 
 ``` ruby
 phone_number = '151********'
@@ -53,8 +51,8 @@ from = '18884060817'
 AliyunSmsRuby.send_global_message(phone_number, text, from, type)
 ```
 
-### Message status query
-Aliyun doc: https://next.api.aliyun.com/document/Dysmsapi/2017-05-25/QuerySendDetails
+### 短信状态查询
+文档地址: https://next.api.aliyun.com/document/Dysmsapi/2017-05-25/QuerySendDetails
 
 ``` ruby
 phone_number = '151********'
