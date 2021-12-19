@@ -17,6 +17,7 @@ module AliyunSmsRuby
       if response != 200 && defined? Rails
         Rails.logger.error(response.body)
       end
+      response
     end
 
     private

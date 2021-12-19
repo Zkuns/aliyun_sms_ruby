@@ -17,7 +17,7 @@ module AliyunSmsRuby
     end
 
     def send_message(mobile, template_code, template_param, optional_params = nil)
-      request = AliyunSmsRuby::Request::MessageRequest.new(mobile, template_code, template_param, optional_params = nil)
+      request = AliyunSmsRuby::Request::MessageRequest.new(mobile, template_code, template_param, optional_params)
       client.send_request request
     end
 
