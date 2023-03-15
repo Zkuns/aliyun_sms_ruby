@@ -3,6 +3,7 @@ require 'aliyun_sms_ruby/client'
 require 'aliyun_sms_ruby/request/message_request'
 require 'aliyun_sms_ruby/request/message_global_request'
 require 'aliyun_sms_ruby/request/query_request'
+require 'aliyun_sms_ruby/request/query_template'
 
 module AliyunSmsRuby
   class << self
@@ -28,6 +29,11 @@ module AliyunSmsRuby
 
     def send_query_request(mobile, send_date, biz_id, page_size, current_page)
       request = AliyunSmsRuby::Request::QueryRequest.new(mobile, send_date, biz_id, page_size, current_page)
+      client.send_request request
+    end
+
+    def send_query_template(template_code)
+      request = AliyunSmsRuby::Request::QueryTemplate.new(template_code)
       client.send_request request
     end
 

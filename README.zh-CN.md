@@ -60,3 +60,11 @@ send_date = Time.now.strftime('%Y%m%d')
 biz_id = '940902739667766114^0'
 AliyunSmsRuby.send_query_request(phone_number, send_date, biz_id, page_size = 1, current_page = 1)
 ```
+
+### 短信模板查询
+Aliyun doc: https://next.api.aliyun.com/document/Dysmsapi/2017-05-25/QuerySmsTemplate
+
+``` ruby
+template_code = 'SMS_182823232'
+AliyunSmsRuby.send_query_template(template_code)
+```
